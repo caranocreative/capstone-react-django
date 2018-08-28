@@ -271,7 +271,7 @@ class MainContainer extends Component {
 
         <Navigation />
        
-        <img className="home-image" src="https://i.imgur.com/N63zgcn.png" alt=""/>
+        {/* <img className="home-image" src="https://i.imgur.com/N63zgcn.png" alt=""/> */}
 
         <Switch>
           <Route exact path="/" render={(props) => (
