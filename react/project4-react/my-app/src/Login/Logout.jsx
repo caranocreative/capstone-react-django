@@ -1,6 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, NavItem, NavLink, Form, FormGroup, Label, Input } from 'reactstrap';
+
 class Login extends React.Component {
   constructor(props) {
     super();
@@ -19,9 +20,10 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <NavItem>
-          <Button color="link" onClick={this.toggle}>Logout</Button>
-        </NavItem>
+       
+          <Button className="ml-auto log-btns" onClick={this.toggle}>Logout</Button>
+       
+
         <Modal isOpen={this.state.modal} modalTransition={{ timeout: 400 }} backdropTransition={{ timeout: 700 }}
           toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Logout</ModalHeader>

@@ -8,15 +8,19 @@
 .body-html-index {
   background-color: rgb(52, 50, 50);
 }
-/* .main-title {
+.main-title {
   text-align: center;
-  color: #B2C100;
-  padding-bottom: 20px;
-  font-family: 'Qwigley', cursive;
-  font-size: 125px;
-} */
+  color: solid black;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Fredericka the Great', cursive; */
+  font-family: 'Oregano', cursive;
+  /* font-family: 'Ranchers', cursive; */
+  /* font-family: 'Henny Penny', cursive; */
+  /* font-family: 'UnifrakturCook', cursive; */
+  font-size: 50px;
+
+}
 .container {
-  padding-top: 60px;
 }
 .card-deck {
   margin-top: 25px;
@@ -24,11 +28,21 @@
 .column-posts {
   max-height: 40%;
 }
-.navbar-main {
-  background-image: linear-gradient(to bottom,rgb(99, 150, 162) 0, rgb(99, 150, 162) 100%) !important; 
+.log-btns {
+  margin-right: 15px;
+  outline-color: black;
+  list-style: none;
+ 
 }
-.link{
-  font-family: 'Courier New', Courier, monospace;
+
+.items-nav {
+  margin-right: 28px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+
+}
+.navbar-main {
+  background-image: linear-gradient(to bottom,rgb(170,80,66) 0, rgb(170,80,66) 100%) !important; 
 }
 .jumbotron {
   margin-top: 50px;

@@ -21,9 +21,11 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <NavItem>
-          <Button color="link" onClick={this.toggle}>Login</Button>
-        </NavItem>
+       
+        
+          <Button className="ml-auto log-btns" onClick={this.toggle}>Login</Button>
+       
+       
         <Modal isOpen={this.state.modal} modalTransition={{ timeout: 400 }} backdropTransition={{ timeout: 700 }}
           toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Login</ModalHeader>

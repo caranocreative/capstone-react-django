@@ -19,9 +19,9 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-        <NavItem>
-          <Button color="link" onClick={this.toggle}>Register</Button>
-        </NavItem>
+        
+          <Button className="ml-auto log-btns" onClick={this.toggle}>Register</Button>
+       
         <Modal isOpen={this.state.modal} modalTransition={{ timeout: 400 }} backdropTransition={{ timeout: 700 }}
           toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Register</ModalHeader>

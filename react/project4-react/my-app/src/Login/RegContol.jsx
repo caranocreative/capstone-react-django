@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import MainContainer from '../MainContainer/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import NavbarComponent from '../Navbar/navbar';
+import NavbarComponent from '../Nav/Nav';
 import Register from './Register';
 
 
@@ -123,7 +123,7 @@ class RegControl extends Component {
         
         <MainContainer csrf_token={this.props.csrf_token} auth_token={this.state.auth_token} /><br />
         
-        <small className="copyright">&copy; 2018 Neighborhood Watch<br /><img src={require('#')} className="logo-small" />
+        <small className="copyright">&copy; 2018 Neighborhood Post<br />
         </small>
       
       </div>

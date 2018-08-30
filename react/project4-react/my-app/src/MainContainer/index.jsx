@@ -5,7 +5,6 @@ import Navigation from '../Nav/Nav.jsx'
 import CreatePost from './CreatePost';
 // import EditPost from './EditPost';
 import { Route, Switch, Link } from 'react-router-dom';
-
 import {
   Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -13,6 +12,9 @@ import {
 import '../App.css';
 import Carousel from '../Carousel/Carousel';
 import EditComment from './Comments/EditComment';
+import RegControl from '../Login/RegContol';
+import Login from '../Login/Login';
+
 
 class MainContainer extends Component {
   constructor() {
@@ -268,10 +270,9 @@ class MainContainer extends Component {
     // console.log(this.state)
     return (
       <Aux>
-
+        <h1 className="main-title">Neighborhood Post</h1>
         <Navigation />
-       
-        {/* <img className="home-image" src="https://i.imgur.com/N63zgcn.png" alt=""/> */}
+     
 
         <Switch>
           <Route exact path="/" render={(props) => (
