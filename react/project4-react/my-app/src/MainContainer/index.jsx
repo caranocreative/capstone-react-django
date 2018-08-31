@@ -86,7 +86,7 @@ class MainContainer extends Component {
       this.props.history.push('/');
     }
 
-  }
+  };
 
   handleSubmit = async (e) => {
     console.log(this.props.csrf_token)
@@ -105,15 +105,15 @@ class MainContainer extends Component {
       }
     });
 
-    const parsedResponse = await loginResponse.json();
-    console.log("TOKEN :", parsedResponse.token);
-    this.setState({ auth_token: parsedResponse.token })
+    // const parsedResponse = await loginResponse.json();
+    // console.log("TOKEN :", parsedResponse.token);
+    // this.setState({ auth_token: parsedResponse.token })
 
-    if (parsedResponse.data === 'login successful') {
-      // switch our route.
-      // Programmatically switching to a new route.
-      this.props.history.push('/');
-    }
+    // if (parsedResponse.data === 'login successful') {
+    //   // switch our route.
+    //   // Programmatically switching to a new route.
+    //   this.props.history.push('/');
+    // }
 
   }
   // ========================= Posts API Calls =========================
@@ -334,8 +334,8 @@ class MainContainer extends Component {
     return (
       <Aux>
         <h1 className="main-title">Neighborhood Post</h1>
-        <Navigation thing={6} />
-
+        <Navigation username={this.state.username} password={this.state.password} handleChange={this.handleChange} handleSubmit={this.handleSubmit} handleRegistration={this.handleRegistration} />
+       
 
         <Switch>
           <Route exact path="/" render={(props) => (
