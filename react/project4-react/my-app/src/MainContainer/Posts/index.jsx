@@ -191,8 +191,8 @@ const Posts = (props) => {
 
 
 
-
-
+    <br></br>        
+    <h1 className="leaveapost">Leave a post or a comment below...</h1>
         <Container className="container">
           <Row>
             <CardDeck className="card-deck">

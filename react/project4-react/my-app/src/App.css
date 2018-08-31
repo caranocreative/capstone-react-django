@@ -54,6 +54,24 @@
   font-family: 'Dancing Script', cursive;
   
 }
+#exampleUser {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#examplePassword {
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+
+}
+#exampleEmail {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.leaveapost {
+  font-family: 'Oregano', cursive;
+  text-align: center;
+}
 .container {
 }
 .card-deck {

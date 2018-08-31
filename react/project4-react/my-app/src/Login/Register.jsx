@@ -31,17 +31,17 @@ class Register extends React.Component {
                 <Label for="exampleUser" hidden>Username</Label>
                 <Input type="text" name="username" id="exampleUser" onChange={this.props.handleChange} placeholder="input a username" />
               </FormGroup>
-              {' '}
+              <br></br>
               <FormGroup>
                 <Label for="exampleEmail" hidden>Email</Label>
                 <Input type="email" name="email" id="exampleEmail" onChange={this.props.handleChange} placeholder="input an email" />
               </FormGroup>
-              {' '}
+              <br></br>
               <FormGroup>
                 <Label for="examplePassword" hidden>Password</Label>
                 <Input type="password" name="password" id="examplePassword" onChange={this.props.handleChange} placeholder="input a password" />
               </FormGroup>
-              {' '}
+              <br></br>
               <Button type="Submit" onClick={this.toggle}>Register</Button>
             </Form>
           </ModalBody>

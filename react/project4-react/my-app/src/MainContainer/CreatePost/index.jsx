@@ -22,7 +22,7 @@ class CreatePost extends Component {
     // console.log(this.props, ' this is props')
     return (
       <Jumbotron className="jumbotron">
-        <h1 className="h1-jumbo">Create a New Blog Post!</h1>
+        <h1 className="h1-jumbo">Create a New Post!</h1>
         <hr className="my-2" />
         <Container className="container-jumbo">
 

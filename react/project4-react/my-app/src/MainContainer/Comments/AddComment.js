@@ -37,15 +37,15 @@ class CreateComment extends Component {
                         </label>
                         <div className="center-textarea">
                         <label className="comment-body-label" >Comment:
-                        <textarea className="form-control comment-textarea" rows="6" cols="48" type="textarea" name="body" onChange={this.updateComment} />
+                        <textarea className="form-control comment-textarea" rows="6" cols="25" type="textarea" name="body" onChange={this.updateComment} />
                         </label>
                       </div>  
                     </FormGroup>
-                    <FormGroup>
+                    {/* <FormGroup>
                         <label className="checkbox-robot">Check box if not a Robot!
                         <input className="checkbox" type="checkbox" name="post" value={this.props.postID} onChange={this.updateComment} />
                         </label>
-                    </FormGroup>    
+                    </FormGroup>     */}
                     <FormGroup>
                         <span className="center-new-comment-btns">
                         <button className="btn btn-primary btn-sm submit-btn" type="submit" value="Comment">Submit</button>
