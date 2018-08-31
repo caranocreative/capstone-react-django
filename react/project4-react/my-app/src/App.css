@@ -5,12 +5,23 @@
 .carousel-size {
   text-align: center;
 } */
+.sun {
+  text-align: center;
+}
+.abc {
+  color: #87A330;
+}
+.headliner {
+  border-bottom-color: #87A330;
+ 
+  float: left;
+}
 .body-html-index {
   background-color: rgb(52, 50, 50);
 }
 .main-title {
   text-align: center;
-  color: solid black;
+  color: whitesmoke;
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Fredericka the Great', cursive; */
   font-family: 'Oregano', cursive;
@@ -18,7 +29,30 @@
   /* font-family: 'Henny Penny', cursive; */
   /* font-family: 'UnifrakturCook', cursive; */
   font-size: 50px;
+  
 
+}
+
+.card-margin8 {
+  margin-right: 20px;
+}
+.card-margin7 {
+  margin-right: 20px;
+}
+.card-margin6 {
+  margin-right: 20px;
+ 
+}
+.card-margin1 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card-margin2 {
+  margin-left: 20px;
+}
+.card-margin4 {
+  font-family: 'Dancing Script', cursive;
+  
 }
 .container {
 }
@@ -30,7 +64,7 @@
 }
 .log-btns {
   margin-right: 15px;
-  outline-color: black;
+ 
   list-style: none;
  
 }
@@ -42,7 +76,7 @@
 
 }
 .navbar-main {
-  background-image: linear-gradient(to bottom,rgb(170,80,66) 0, rgb(170,80,66) 100%) !important; 
+  background-image: linear-gradient(to bottom,rgb(135, 163, 48) 0, rgb(135, 163, 48) 100%) !important; 
 }
 .jumbotron {
   margin-top: 50px;
@@ -86,6 +120,19 @@
 }
 .container-jumbo {
   text-align: left;
+}
+.blog-body {
+  font-size: 10px;
+}
+.blog-title {
+  font-size: 16px;
+}
+.blog-date {
+  font-size: 10px;
+}
+.blog-pic {
+  width: 25%;
+  height: 25%;
 }
 .h1-jumbo {
   text-align: center;

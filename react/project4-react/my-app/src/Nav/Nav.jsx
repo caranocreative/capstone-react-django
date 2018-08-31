@@ -24,8 +24,8 @@ import Register from '../Login/Register';
 
 
 export default class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -41,6 +41,7 @@ export default class Navigation extends React.Component {
 
 
   render(props) {
+    console.log(this.props)
     return (
       <Aux >
 
@@ -51,20 +52,31 @@ export default class Navigation extends React.Component {
             
             <Nav className="m-auto items-nav" navbar>
               <NavItem>
-                <NavLink className="navbarbrand link" href="/">News</NavLink>
+                <NavLink className="navbarbrand link" href="/">News  </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navbarbrand link" href="#">Events</NavLink>
-              </NavItem>
-              
-              <NavItem>
-                <NavLink className="navbarbrand link" href="/">For Sale</NavLink>
+                <div className="abc"> aaaa </div>
               </NavItem>
               <NavItem>
-                <NavLink className="navbarbrand link" href="/">Recipes</NavLink>
+                <NavLink className="navbarbrand link" href="#">  Events </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navbarbrand link" href="/new">Post</NavLink>
+              <div className="abc"> aaaa </div>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navbarbrand link" href="/">  For Sale </NavLink>
+              </NavItem>
+              <NavItem>
+              <div className="abc"> aaaa </div>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navbarbrand link" href="/">  Recipes  </NavLink>
+              </NavItem>
+              <NavItem>
+              <div className="abc"> aaaa </div>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navbarbrand link" href="/new">  Post</NavLink>
               </NavItem>
             </Nav>
           

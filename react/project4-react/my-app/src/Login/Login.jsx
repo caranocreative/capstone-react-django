@@ -12,6 +12,8 @@ class Login extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
+  
+
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -23,14 +25,14 @@ class Login extends React.Component {
       <div>
        
         
-          <Button className="ml-auto log-btns" onClick={this.toggle}>Login</Button>
+          <Button className="ml-auto log-btns" color="black" onClick={this.toggle}>Login</Button>
        
        
         <Modal isOpen={this.state.modal} modalTransition={{ timeout: 400 }} backdropTransition={{ timeout: 700 }}
           toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Login</ModalHeader>
           <ModalBody>
-            <Form onSubmit={this.props.handleSubmit} inline>
+            <Form inline>
               <FormGroup>
                 <Label for="exampleEmail" hidden>Email</Label>
                 <Input type="text" name="username" id="exampleEmail" onChange={this.props.handleChange} placeholder="Email (username)" />
@@ -41,7 +43,7 @@ class Login extends React.Component {
                 <Input type="password" name="password" id="examplePassword" onChange={this.props.handleChange} placeholder="Password" />
               </FormGroup>
               {' '}
-              <Button type="submit" onClick={this.toggle}>Login</Button>
+              <Button type="submit" onClick={(e) => {this.props.handleSubmit(e); this.toggle()}}>Login</Button>
               
               
 

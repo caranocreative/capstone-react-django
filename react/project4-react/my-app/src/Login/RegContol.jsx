@@ -24,7 +24,7 @@ class RegControl extends Component {
     });
   }
 
-  componentDidMount() {
+  // componentDidMount() {
     // if (this.state.logged_in) {
     //   fetch('http://localhost:8000/get_auth_token/', {
     //     headers: {
@@ -36,7 +36,7 @@ class RegControl extends Component {
     //     });
     // }
 
-  }
+  // }
 
   handleChange = (e) => {
     console.log(e.currentTarget.value);
@@ -75,6 +75,7 @@ class RegControl extends Component {
 
   handleSubmit = async (e) => {
     console.log(this.props.csrf_token)
+    console.log(e)
     e.preventDefault();
     const data = { ...this.state, csrfmiddlewaretoken: this.props.csrf_token };
     console.log(data)
@@ -101,6 +102,7 @@ class RegControl extends Component {
 
   }
   render() {
+    console.log(this.props)
     return (
       <div className='mainContainer'>
         

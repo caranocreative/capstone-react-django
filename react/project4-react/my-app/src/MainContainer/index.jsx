@@ -52,7 +52,70 @@ class MainContainer extends Component {
       // console.log(err);
     })
   }
+  // ======================== RegControl =================================
+  handleChange = (e) => {
+    console.log(e.currentTarget.value);
+    this.setState({ [e.currentTarget.name]: e.currentTarget.value });
 
+  }
+
+  handleRegistration = async (e) => {
+    console.log(this.props.csrf_token, '### GOT IN handleregistration')
+    e.preventDefault();
+    const data = { ...this.state, csrfmiddlewaretoken: this.props.csrf_token };
+    console.log(data)
+    const registrationResponse = await fetch('http://localhost:8000/api/users/', {
+      credentials: 'include',
+      method: 'POST',
+      body: JSON.stringify(
+        data),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': this.props.csrf_token,
+      }
+    });
+
+    const parsedResponse = await registrationResponse.json();
+    console.log('## Parsed RESPONSE', parsedResponse);
+    this.setState({ auth_token: parsedResponse.token })
+    console.log(parsedResponse.status, '### PARSED RESPONSE');
+
+    if (parsedResponse.status === 201) {
+      // switch our route.
+      // Programmatically switching to a new route.
+      this.props.history.push('/');
+    }
+
+  }
+
+  handleSubmit = async (e) => {
+    console.log(this.props.csrf_token)
+    console.log(e)
+    e.preventDefault();
+    const data = { ...this.state, csrfmiddlewaretoken: this.props.csrf_token };
+    console.log(data)
+    const loginResponse = await fetch('http://localhost:8000/get_auth_token/', {
+      credentials: 'include',
+      method: 'POST',
+      body: JSON.stringify(
+        data),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': this.props.csrf_token,
+      }
+    });
+
+    const parsedResponse = await loginResponse.json();
+    console.log("TOKEN :", parsedResponse.token);
+    this.setState({ auth_token: parsedResponse.token })
+
+    if (parsedResponse.data === 'login successful') {
+      // switch our route.
+      // Programmatically switching to a new route.
+      this.props.history.push('/');
+    }
+
+  }
   // ========================= Posts API Calls =========================
   getPosts = async () => {
 
@@ -76,13 +139,13 @@ class MainContainer extends Component {
       const createdPostJson = await createdPost.json();
 
       console.log(createdPostJson);
-      this.setState({posts: [...this.state.posts, createdPostJson]});
-    } catch(err) {
+      this.setState({ posts: [...this.state.posts, createdPostJson] });
+    } catch (err) {
       console.log(err)
 
     }
   }
-  
+
   deletePost = async (id, e) => {
     // console.log(id, ' this is id of the post in the delete route');
     e.preventDefault();
@@ -95,9 +158,9 @@ class MainContainer extends Component {
       this.setState({ posts: this.state.posts.filter((post, i) => post.id !== id) });
     } catch (err) {
       console.log(err, ' error')
-      }
-
     }
+
+  }
 
 
   showModal = (id, e) => {
@@ -230,7 +293,7 @@ class MainContainer extends Component {
         method: 'PUT',
         body: JSON.stringify({
           ...this.state.commentToEdit,
-          "post":post
+          "post": post
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -271,29 +334,29 @@ class MainContainer extends Component {
     return (
       <Aux>
         <h1 className="main-title">Neighborhood Post</h1>
-        <Navigation />
-     
+        <Navigation thing={6} />
+
 
         <Switch>
           <Route exact path="/" render={(props) => (
 
-          <Posts posts={this.state.posts}
-                   deletePost={this.deletePost}
-                   showModal={this.showModal}
-                   ////////////passing props for edit POST ///////////
-                   showEdit={this.state.showEdit}
-                   comments={this.state.comments}
-                   addComment={this.addComment} 
-                   deleteComment={this.deleteComment} 
-                   closeAndEdit={this.closeAndEdit} 
-                   handleFormChange={this.handleFormChange} 
-                   postToEdit={this.state.postToEdit}
-                   ///////////passing props for  edit COMMENT ////////
-                   showCommentEdit={this.state.showCommentEdit}
-                   closeAndEditComment={this.closeAndEditComment}
-                   handleCommentFormChange={this.handleCommentFormChange} 
-                   commentToEdit={this.state.commentToEdit}
-                   showCommentModal={this.showCommentModal}
+            <Posts posts={this.state.posts}
+              deletePost={this.deletePost}
+              showModal={this.showModal}
+              ////////////passing props for edit POST ///////////
+              showEdit={this.state.showEdit}
+              comments={this.state.comments}
+              addComment={this.addComment}
+              deleteComment={this.deleteComment}
+              closeAndEdit={this.closeAndEdit}
+              handleFormChange={this.handleFormChange}
+              postToEdit={this.state.postToEdit}
+              ///////////passing props for  edit COMMENT ////////
+              showCommentEdit={this.state.showCommentEdit}
+              closeAndEditComment={this.closeAndEditComment}
+              handleCommentFormChange={this.handleCommentFormChange}
+              commentToEdit={this.state.commentToEdit}
+              showCommentModal={this.showCommentModal}
             />
 
           )} />

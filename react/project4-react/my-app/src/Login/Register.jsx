@@ -20,7 +20,7 @@ class Register extends React.Component {
     return (
       <div>
         
-          <Button className="ml-auto log-btns" onClick={this.toggle}>Register</Button>
+          <Button className="ml-auto log-btns" color="black" onClick={this.toggle}>Register</Button>
        
         <Modal isOpen={this.state.modal} modalTransition={{ timeout: 400 }} backdropTransition={{ timeout: 700 }}
           toggle={this.toggle} className={this.props.className}>
