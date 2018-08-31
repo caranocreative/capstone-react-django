@@ -7,12 +7,16 @@ Set up like a newspaper/newsletter to share current news, events, recipes, thing
 # User Stories
 The User for this app would be a neighborhood that wants to build community and connect.
 
-# Unsolved problems and future features
-Profile pages for users to save info, images etc.
-Some type of animations would be nice
-
 # Wireframe
 https://freehand.invisionapp.com/freehand/document/xQURvlIeo
 
+#Data Models
+From project 4
+https://files.slack.com/files-pri/T0351JZQ0-FC9U1HFHR/screen_shot_2018-08-16_at_2.31.03_pm.png
 
+Added Register, Login, Logout
+
+# Unsolved problems and future features
+Profile pages for users to save info, images etc.
+Some type of animations would be nice
 
