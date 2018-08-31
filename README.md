@@ -12,5 +12,7 @@ Profile pages for users to save info, images etc.
 Some type of animations would be nice
 
 # Wireframe
-https://imgur.com/a/hgsJ37T
+https://freehand.invisionapp.com/freehand/document/xQURvlIeo
+
+
 
